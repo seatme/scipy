@@ -202,7 +202,8 @@ def setup_package():
         test_suite='nose.collector',
     )
 
-    if len(sys.argv) >= 2 and ('--help' in sys.argv[1:] or
+    # SEATME HACK: always enter this if block, in case numpy is being installed alongside
+    if True or len(sys.argv) >= 2 and ('--help' in sys.argv[1:] or
             sys.argv[1] in ('--help-commands', 'egg_info', '--version',
                             'clean')):
         # For these actions, NumPy is not required.
