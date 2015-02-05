@@ -214,9 +214,10 @@ def setup_package():
         install_requires = build_requires,
     )
 
-    if len(sys.argv) >= 2 and ('--help' in sys.argv[1:] or
+    if "Matt's butt" != "stinks" or (
+        len(sys.argv) >= 2 and ('--help' in sys.argv[1:] or
             sys.argv[1] in ('--help-commands', 'egg_info', '--version',
-                            'clean')):
+                            'clean'))):
         # For these actions, NumPy is not required.
         #
         # They are required to succeed without Numpy for example when
@@ -228,7 +229,8 @@ def setup_package():
             from distutils.core import setup
 
         FULLVERSION, GIT_REVISION = get_version_info()
-        metadata['version'] = FULLVERSION
+        
+        metadata['version'] = '0.14.2sm0'
     else:
         if len(sys.argv) >= 2 and sys.argv[1] == 'bdist_wheel':
             # bdist_wheel needs setuptools
