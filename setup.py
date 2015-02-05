@@ -230,7 +230,7 @@ def setup_package():
 
         FULLVERSION, GIT_REVISION = get_version_info()
         
-        metadata['version'] = '0.14.2sm0'
+        metadata['version'] = '0.14.2sm1'
     else:
         if len(sys.argv) >= 2 and sys.argv[1] == 'bdist_wheel':
             # bdist_wheel needs setuptools
